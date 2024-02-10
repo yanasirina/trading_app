@@ -1,7 +1,7 @@
 from typing import Optional
 
 from fastapi import Depends, Request
-from fastapi_users import BaseUserManager, IntegerIDMixin, schemas, models
+from fastapi_users import BaseUserManager, IntegerIDMixin
 
 from .models import User, get_user_db
 from config import USER_MANAGER_SECRET

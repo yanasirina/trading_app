@@ -4,11 +4,13 @@ from fastapi import Depends
 from fastapi_users.db import SQLAlchemyBaseUserTable
 from fastapi_users_db_sqlalchemy import SQLAlchemyUserDatabase
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import mapped_column, Mapped
+from sqlalchemy.orm import mapped_column, Mapped, declarative_base
 from sqlalchemy import String, Integer, TIMESTAMP, ForeignKey, JSON
 
-from database import Base, get_async_session
+from database import get_async_session
 
+
+Base = declarative_base()
 
 class Role(Base):
     __tablename__ = "role"
