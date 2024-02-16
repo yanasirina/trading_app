@@ -12,6 +12,7 @@ from database import get_async_session
 
 Base = declarative_base()
 
+
 class Role(Base):
     __tablename__ = "role"
 
