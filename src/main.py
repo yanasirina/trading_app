@@ -9,12 +9,14 @@ from redis import asyncio as aioredis
 
 from auth.router import router as auth_router
 from operations.router import router as operation_router
+from sender.router import router as sender_router
 
 
 app = FastAPI(title="Trading App")
 
 app.include_router(auth_router)
 app.include_router(operation_router)
+app.include_router(sender_router)
 
 
 @app.get("/long_operation")
